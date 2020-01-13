@@ -1,0 +1,58 @@
+.highcharts-credits{
+    display: none;
+}
+
+.highcharts-input-group{
+    display: none;
+}
+
+.highcharts-point-up{
+    fill: #9d7ffe;
+    stroke: #9d7ffe;
+    stroke-width: 1;
+}
+
+.highcharts-point-down{
+    fill: #39d3ec;
+    stroke: #39d3ec;
+    stroke-width: 1;
+}
+
+.highcharts-yaxis{
+    display: none;
+}
+
+rect.highcharts-point{
+    fill: #eff2fc;
+}
+
+.chart-wrapper{
+    width: 800px;
+    height: 450px;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+.highcharts-container{
+    margin: 0 auto
+}
+
+.highcharts-markers{
+    display: none;
+}
+
+#preview-chart-1 .highcharts-graph{
+    stroke: #ffc246;
+}
+
+#preview-chart-2 .highcharts-graph{
+    stroke: #5470de;
+}
+
+#preview-chart-3 .highcharts-graph{
+    stroke: #07beaa;
+}
+
+#preview-chart-4 .highcharts-graph{
+    stroke: #0d99e6;
+}

@@ -1,0 +1,7 @@
+%loadingAnimation{
+    animation: loader 2s linear 0.1s infinite forwards ;
+    background: #ffffff;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 10%, #eeeeee 33%);
+    background-size: 300px 50px;
+    position: relative;
+}

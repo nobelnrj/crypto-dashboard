@@ -1,0 +1,82 @@
+.newsfeed{
+    width: calc((100% / 2) - 10px);
+    height: 290px;
+    float: left;
+    border-radius: 12px;
+    background-color: #ffffff;
+    margin: 20px 0 0 20px;
+    border: solid 0.7px #dfe5f9;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    .expand-btn{
+        transition: transform 0.5s ease;
+        margin: 0 10px 0 0;
+    }
+    .newsfeed-header{
+        padding: 20px;
+        
+        font-size: 15px;
+        color: $heading-color;
+        text-transform: capitalize;
+        font-weight: $heading-fontweight;
+        position: relative;
+        .subscribe-btn{
+            border: solid 0.7px rgba(48, 55, 80, 0.08);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: inherit;
+            color: $heading-color;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            text-transform: uppercase;
+        }
+    }
+    .feed-container{
+        padding: 0 20px 20px;
+        height: 250px;
+        overflow: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .feed-item{
+            padding: 5px 20px;
+            border: solid 0.7px #dfe5f9;
+            border-radius: 12px;
+            margin: 0 0 20px;
+            background-image: linear-gradient(135deg, #fff 50%,$linear-gradient);
+            background-size: 115px 110px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            a{
+                
+                .time-stamp{
+                    font-size: 11px;
+                    color: #2a2b31;
+                    letter-spacing: 0.28px;
+                    margin: 0 0 15px;
+                }
+                .feed-title{
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #42434b;
+                    width: 350px;
+                    margin: 0 0 10px;
+                }
+                .feed-content{
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #42434b67;
+                    width: 350px;
+                }
+            }
+        }
+    }
+    &.small-section{
+        height: 55px;
+        .expand-btn{
+            transform: rotate(-45deg);
+        }
+    }
+}

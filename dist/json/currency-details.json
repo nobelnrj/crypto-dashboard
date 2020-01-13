@@ -1,0 +1,76 @@
+{
+    "currency":[
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "btc",
+            "name": "bitcoin",
+            "value": "721,882",
+            "status": "negative",
+            "percentage": "-4.66%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#ethereum-o",
+            "abbr": "eth",
+            "name": "ethereum",
+            "value": "22,370",
+            "status": "positive",
+            "percentage": "+0.45%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#xem-o",
+            "abbr": "xem",
+            "name": "nem",
+            "value": "10,604",
+            "status": "negative",
+            "percentage": "-1.07%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#ripple-o",
+            "abbr": "xrp",
+            "name": "ripple",
+            "value": "50,839",
+            "status": "positive",
+            "percentage": "+0.66%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "bch",
+            "name": "bitcoin cash",
+            "value": "48,676",
+            "status": "positive",
+            "percentage": "+0.38%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "ltc",
+            "name": "litecoin",
+            "value": "5,788.5",
+            "status": "negative",
+            "percentage": "-0.23%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "etc",
+            "name": "etherium classic",
+            "value": "1,660.7",
+            "status": "negative",
+            "percentage": "-0.09%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "fct",
+            "name": "factom",
+            "value": "534.68",
+            "status": "positive",
+            "percentage": "+8.47%"
+        },
+        {
+            "icon": "./sprite/symbol/sprite.svg#bitcoin",
+            "abbr": "lsk",
+            "name": "lisk",
+            "value": "321.14",
+            "status": "negative",
+            "percentage": "-0.47%"
+        }
+    ]
+}

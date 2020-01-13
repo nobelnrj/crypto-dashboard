@@ -1,0 +1,78 @@
+.currency-details{
+    div{
+        display: inline-block;
+    }
+    .currency-symbol{
+        margin: 0 10px 0 0;
+        svg{
+            width: 22px;
+            height: 22px;
+        }
+    }
+    .currency-detail{
+        width: 50px;
+        overflow: hidden;
+        margin: 0 45px 0 0;
+        white-space: normal;
+        text-align: left;
+        .currency-abbr{
+            
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: $heading-fontweight;
+            color: $heading-color;
+            display: inline-block;
+        }
+        .currency-name{
+            
+            font-size: 11px;
+            font-weight: $content-fontweight;
+            color: $secondary-color;
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            display: inline-block;
+            overflow: hidden;
+            width: inherit;
+            white-space: nowrap;
+        }
+    }
+    .currency-data{
+        overflow: hidden;
+        text-align: right;
+        white-space: normal;
+        margin-left: 20px;
+        .currency-value{
+            
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: $heading-fontweight;
+            color: $heading-color;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .currency-status{
+            
+            font-size: 11px;
+            font-weight: $content-fontweight;
+            text-transform: capitalize;
+            display: block;
+            svg{
+                width: 10px;
+                height: 10px;
+            }
+            &.negative{
+                color: $negative-statuscolor;
+                svg{
+                    fill: $negative-statuscolor;
+                }
+            }
+            &.positive{
+                color: $positive-statuscolor;
+                svg{
+                    fill: $positive-statuscolor;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.activities{
+    width: calc((100% / 2) - 10px);
+    height: 290px;
+    float: left;
+    border-radius: 12px;
+    background-color: #ffffff;
+    margin: 20px 0 0;
+    border: solid 0.7px #dfe5f9;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    .expand-btn{
+        transition: transform 0.5s ease;
+        margin: 0 10px 0 0;
+    }
+    .activity-header{
+        padding: 20px;
+        
+        font-size: 15px;
+        color: $heading-color;
+        text-transform: capitalize;
+        font-weight: $heading-fontweight;
+    }
+    .tabs-container{
+        padding: 20px;
+        .tabs{
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            
+            font-size: 11px;
+            color: $secondary-color;
+            text-transform: uppercase;
+            margin: 0 20px 0 0;
+            &.active{
+                color: $heading-color;
+                &::after{
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    border-radius: 4px;
+                    background-image: linear-gradient(88deg, $linear-gradient);
+                }
+            }
+        }
+    }
+    .table-view{
+        width: 100%;
+        tr{
+            border-bottom: solid 0.7px #dfe5f9;
+            &:first-child{
+                border-top: solid 0.7px #dfe5f9;
+                background-color: #fafbff;
+            }
+            &:last-child{
+                border: none;
+            }
+            th,td{
+                padding: 15px 20px;
+                
+                font-size: 13px;
+                color: $heading-color;
+                font-weight: $heading-fontweight;
+                &:last-child{
+                    text-align: right;
+                }
+            }
+            th{
+                text-align: left;
+            }
+            td{
+                font-weight: 500;
+                &:last-child{
+                    background: linear-gradient(88deg, $linear-gradient);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    &.small-section{
+        height: 55px;
+        .expand-btn{
+            transform: rotate(-45deg);
+        }
+    }
+}

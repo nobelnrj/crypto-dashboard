@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/arrow.scss"],"names":[],"mappings":"AAAA;EACI,kBAAkB;EAClB,yBAAyB;EACzB,kBAAkB;EAClB,YAAY,EAAA","file":"../../scss/components/arrow.css","sourcesContent":[".arrow{\r\n    border: solid #fff;\r\n    border-width: 0 1px 1px 0;\r\n    position: absolute;\r\n    padding: 4px;\r\n}"]}

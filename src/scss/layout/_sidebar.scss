@@ -1,0 +1,65 @@
+.sidebar{
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1f263e;
+    z-index: 2;
+    transition: width 0.5s ease;
+    white-space: nowrap;
+    .logo{
+        cursor: pointer;
+        margin: 24px 20px 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f8f9fb1e;
+        .logo-icon{
+            width: 32px;
+            height: 32px;
+        }
+        .company-name{
+            margin: 0 0 0 10px;
+            
+            font-size: 15px;
+            font-weight: $content-fontweight;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 30px;
+            vertical-align: top;
+        }
+    }
+    &.sidebar-small{
+        width: 60px;
+        .logo{
+            .company-name{
+                display: none;
+            }
+        }
+        .category-container{
+            .category{
+                .category-heading{
+                    display: none;
+                }
+                ul{
+                    .tabs{
+                        .tab-name{
+                            display: none;
+                        }
+                        .arrow{
+                            display: none;
+                        }
+                        .tabs-dropdown{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .logout-btn{
+            span{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    box-shadow: 0 8px 28px 0 rgba(72, 89, 102, 0.1);
+    top: 0;
+    nav{
+        margin: 15px 40px 15px 22px;
+        .left-menu{
+            float: left;
+            padding: 10px 0;
+            margin: 0 0 0 200px;
+            transition: margin 0.5s ease;
+            &>*{
+                display: inline-block;
+                margin: 0 0 0 30px;
+            }
+            .menu-btn{
+                width: 20px;
+                height: 20px;
+                transition: transform 0.5s ease;
+                &:hover{
+                    fill: #0043ff;
+                    transform: translateX(-2px);
+                }
+            }
+            .box-btn{
+                width: 20px;
+                height: 20px;
+                &:hover{
+                    fill: #0043ff;
+                }
+            }
+            .currency-search{
+                position: relative;
+                .search-box{
+                    background-color: #f8f9fb;
+                    color: $heading-color;
+                    font-size: 11px;
+                    border: none;
+                    padding: 8px 75px 8px 40px;
+                    vertical-align: super;
+                    border-radius: 15px;
+                    &::placeholder{
+                        color: $secondary-color;
+                        font-size: 11px;
+                        
+                    }
+                }
+                svg{
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 10px;
+                    top: 5px;
+                    cursor: pointer;
+                }
+                .clear-btn{
+                    position: absolute;
+                    right: 20px;
+                    top: 5px;
+                    
+                    font-size: 15px;
+                    display: none;
+                    cursor: pointer;
+                }
+            }
+            &.sidebar-small{
+                margin: 0 0 0 50px;
+                .menu-btn{
+                    &:hover{
+                        transform: translateX(2px);
+                    }
+                }
+            }
+        }
+        .right-menu{
+            float: right;
+            padding: 8px 0;
+            &>*{
+                display: inline-block;
+                margin: 0 0 0 30px;
+            }
+            .profile-photo{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }   
+            .settings-btn,.notification-btn,.country-btn{
+                svg{
+                    width: 18px;
+                    height: 18px;
+                    vertical-align: middle;
+                    transition: transform 0.5s ease;
+                }
+            }
+            .settings-btn{
+                svg{
+                    &:hover{
+                        fill: #0043ff;
+                        transform: rotate(60deg);
+                    }
+                }
+            }
+            .notification-btn{
+                position: relative;
+                .count{
+                    background-color: #f56c89;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    color: #ffffff;
+                    font-size: 12px;
+                    line-height: 18px;
+                    vertical-align: middle;
+                }
+                &:hover{
+                    svg{
+                        fill: #0043ff;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}

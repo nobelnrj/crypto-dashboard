@@ -1,0 +1,101 @@
+.stock-container{
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: solid 0.7px #dfe5f9;
+    overflow: hidden;
+    .stockchart-container{
+        float: left;
+        width: 75%;
+        height: 100%;
+        .stock-header{
+            padding: 20px;
+            border-bottom: solid 0.7px #dfe5f9;
+            .currency-name{
+                float: left;
+                
+                font-size: 15px;
+                font-weight: $heading-fontweight;
+                color: $heading-color;
+                text-transform: uppercase;
+                sub{
+                    font-size: 11px;
+                    color: $secondary-color;
+                    cursor: pointer;
+                    svg{
+                        width: 12px;
+                        height: 12px;
+                        fill: $secondary-color;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .buy-btn{
+                float: right;
+                
+                font-size: 11px;
+                text-align: center;
+                color: #ffffff;
+                text-transform: uppercase;
+                padding: 5px 20px;
+                border-radius: 4px;
+                background-image: linear-gradient(85deg, $linear-gradient);
+            }
+        }
+        .stock-details{
+            padding: 20px;
+            border-bottom: solid 0.7px #dfe5f9;
+            background-color: #fafbff;
+            .current-value{
+                margin: 0 70px 0 0;
+                display: inline-block;
+                .open-stockvalue{
+                    float: left;
+                    line-height: 19px;
+                    font-size: 18px;
+                    color: $heading-color;
+                    font-weight: $heading-fontweight;
+                    margin: 0 10px 0 0;
+                }
+                .stock-status{
+                    
+                    font-size: 11px;
+                    color: #ee2e6b;
+                    svg{
+                        width: 10px;
+                        height: 10px;
+                        fill: #ee2e6b;
+                    }
+                }
+            }
+            .overall-value{
+                .label{
+                    
+                    text-transform: capitalize;
+                    font-size: 11px;
+                    color: $secondary-color;
+                    margin: 0 5px 0 5px;
+                }
+                span:nth-child(2n){
+                    
+                    text-transform: capitalize;
+                    font-size: 11px;
+                    color: $heading-color;
+                    margin: 0 5px 0 5px;
+                }
+            }
+            .alert-btn{
+                float: right;
+                padding: 5px 0;
+                text-transform: capitalize;
+                font-size: 11px;
+                color: $secondary-color;
+            }
+        }
+    }
+    .currency-list{
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+}
