@@ -60,7 +60,7 @@
             "icon": "./sprite/symbol/sprite.svg#bitcoin",
             "abbr": "fct",
             "name": "factom",
-            "value": "534.68",
+            "value": "534,68",
             "status": "positive",
             "percentage": "+8.47%"
         },
@@ -68,7 +68,7 @@
             "icon": "./sprite/symbol/sprite.svg#bitcoin",
             "abbr": "lsk",
             "name": "lisk",
-            "value": "321.14",
+            "value": "32,114",
             "status": "negative",
             "percentage": "-0.47%"
         }

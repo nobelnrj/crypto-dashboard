@@ -96,10 +96,20 @@ header{
                 }
             }
             .settings-btn{
+                position: relative;
                 svg{
                     &:hover{
                         fill: #0043ff;
                         transform: rotate(60deg);
+                    }
+                }
+                &.opened{
+                    .dropdown{
+                        width: 100px;
+                        height: auto;
+                        transform: translate3d(0px,-5px,0px);
+                        will-change: transform;
+                        padding: 10px 0;
                     }
                 }
             }
@@ -122,6 +132,15 @@ header{
                     svg{
                         fill: #0043ff;
                         transform: rotate(-45deg);
+                    }
+                }
+                &.opened{
+                    .dropdown{
+                        width: 300px;
+                        height: auto;
+                        transform: translate3d(0px,-5px,0px);
+                        will-change: transform;
+                        padding: 10px 0;
                     }
                 }
             }

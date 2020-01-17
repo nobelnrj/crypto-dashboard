@@ -1,0 +1,54 @@
+.dropdown{
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -40px;
+    top: 40px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: transform 0.5s ease;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    cursor: initial;
+        li{
+            padding: 5px 15px;
+            text-transform: capitalize;
+            cursor: pointer;
+            text-align: left;
+            .notification-heading{
+                font-size: 15px;
+                margin:10px 0 10px;
+                color: #000000;
+            }
+            .notification-content{
+                font-size: 12px;
+                margin: 0 0 10px;
+                color: rgba(82, 63, 105, 0.7);
+            }
+            .time-stamp{
+                font-size: 12px;
+                color: rgba(82, 63, 105, 0.7);
+            }
+            &:hover{
+                background-color: #eee;
+            }
+            &.dropdown-header{
+                text-align: center;
+                cursor: initial;
+                border-bottom: solid 1px $border-color;
+                &:hover{
+                    background-color: #ffffff;
+                }
+            }
+            &.dropdown-footer{
+                text-align: center;
+                cursor: initial;
+                padding-top: 10px;
+                border-top: solid 1px $border-color;
+                &:hover{
+                    background-color: #ffffff;
+                }
+            }
+        }
+}

@@ -4,14 +4,11 @@
 			"path": "."
 		},
 		{
-			"path": "C:\\Users\\user.FULL281-WIN.000.001.002.003.004.005.006\\Desktop\\webapps\\AdaptiveU"
-		},
-		{
-			"path": "C:\\Users\\user.FULL281-WIN.000.001.002.003.004.005.006\\Desktop\\Extra\\github"
+			"path": "C:\\Users\\user.FULL281-WIN.000.001.002.003.004.005.006\\Desktop\\Extra\\Anytime-mobile"
 		}
 	],
 	"settings": {
 		"git.ignoreLimitWarning": true,
-		"liveServer.settings.multiRootWorkspaceName": "Crypto"
+		"liveServer.settings.multiRootWorkspaceName": "Anytime-mobile"
 	}
 }

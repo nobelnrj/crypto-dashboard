@@ -6,9 +6,11 @@ function createCarousel(response){
     var leftBtn = document.querySelector('.left-btn');
     rightBtn.addEventListener('click',function(){
         var width = document.querySelector('.carousel-item').offsetWidth;
-        var left = document.querySelector('.carousel-list').offsetLeft;
+        var style = window.getComputedStyle(currencyContainer);
+        var matrix = new WebKitCSSMatrix(style.webkitTransform);
+        var left = matrix.m41;
         if(left > -((totalItems-4)*250)){
-            currencyContainer.style.left = `${left-width-27}px`;
+            currencyContainer.style.transform = `translateX(${left-width-27}px)`;
             leftBtn.classList.add('active');
         }
         if(left < -((totalItems-5)*250)){
@@ -21,16 +23,18 @@ function createCarousel(response){
     });
     leftBtn.addEventListener('click',function(){
         var width = document.querySelector('.carousel-item').offsetWidth;
-        var left = document.querySelector('.carousel-list').offsetLeft;
+        var style = window.getComputedStyle(currencyContainer);
+        var matrix = new WebKitCSSMatrix(style.webkitTransform);
+        var left = matrix.m41;
         if(left < 0){
-            currencyContainer.style.left = `${left+width+27}px`;
+            currencyContainer.style.transform = `translateX(${left+width+27}px)`;
             rightBtn.classList.add('active');
         }
         if(left > -280){
             leftBtn.classList.remove('active');
         }
         if(carouselContainer.classList.contains("list-view")){
-            currencyContainer.style.left = "0px";
+            currencyContainer.style.transform = `translateX(${0}px)`;
         }
     });
 }

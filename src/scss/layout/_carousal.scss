@@ -32,9 +32,8 @@
     }
     .carousel-list{
         white-space: nowrap;
-        position: relative;
-        left: 0px;
-        transition: left 0.5s linear;
+        transform: translateX(0);
+        transition: transform 0.2s linear;
         .carousel-loader{
             display: none;
         }
