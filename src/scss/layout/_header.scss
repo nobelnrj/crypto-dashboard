@@ -86,6 +86,11 @@ header{
                 width: 32px;
                 height: 32px;
                 border-radius: 50%;
+                cursor: pointer;
+                transition: transform 0.5s ease;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }   
             .settings-btn,.notification-btn,.country-btn{
                 svg{
@@ -115,7 +120,7 @@ header{
             }
             .notification-btn{
                 position: relative;
-                .count{
+                &>.count{
                     background-color: #f56c89;
                     position: absolute;
                     top: -10px;
@@ -129,7 +134,7 @@ header{
                     vertical-align: middle;
                 }
                 &:hover{
-                    svg{
+                    &>svg{
                         fill: #0043ff;
                         transform: rotate(-45deg);
                     }
@@ -138,6 +143,7 @@ header{
                     .dropdown{
                         width: 300px;
                         height: auto;
+                        min-height: 200px;
                         transform: translate3d(0px,-5px,0px);
                         will-change: transform;
                         padding: 10px 0;

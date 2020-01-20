@@ -1,0 +1,39 @@
+{
+    "notification" : [
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "update completed",
+            "content" : "restart server 12 to complete the upadte",
+            "timestamp" : "2h ago"
+        },
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "lorem ipsum",
+            "content" : "aliquam ex eros, imperdiet vulputate henderit et.",
+            "timestamp" : "6h ago"
+        },
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "login from 192.186.1.1",
+            "timestamp" : "8h ago"
+        },
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "new connection",
+            "content" : "ragul accepted your request",
+            "timestamp" : "12h ago"
+        },
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "lorem ipsum",
+            "content" : "aliquam ex eros, imperdiet vulputate henderit et.",
+            "timestamp" : "6h ago"
+        },
+        {
+            "icon" : "./sprite/symbol/sprite.svg#notify",
+            "heading" : "lorem ipsum",
+            "content" : "aliquam ex eros, imperdiet vulputate henderit et.",
+            "timestamp" : "6h ago"
+        }
+    ]
+}

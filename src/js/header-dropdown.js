@@ -1,10 +1,16 @@
 var notificationBtn = document.querySelector('.notification-btn');
 var settingsBtn = document.querySelector('.settings-btn');
+var sortBtn = document.querySelector('.sort-btn');
 notificationBtn.addEventListener('click',function(e){
     openDropdown(e);
 });
+
 settingsBtn.addEventListener('click',function(e){
     openDropdown(e);
+});
+
+sortBtn.addEventListener('click',function(e){
+    openDropdown(e)
 });
 
 function openDropdown(e){
@@ -21,14 +27,10 @@ function openDropdown(e){
 }
 
 function dropdownToggler(e){
-    if(e.target.parentNode.classList.contains("settings-btn") || e.target.parentNode.classList.contains("notification-btn")){
+    if(e.target.parentNode.classList.contains("settings-btn") || e.target.parentNode.classList.contains("notification-btn") || e.target.parentNode.classList.contains("list-header")){
         e.target.parentNode.classList.toggle("opened");
     }
     else{
         e.target.classList.toggle("opened");
     }
 }
-
-// document.addEventListener('click',function(e){
-//     document.querySelector('.opened').classList.remove("opened");
-// });

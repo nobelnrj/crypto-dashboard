@@ -3,6 +3,7 @@
     .list-header{
         padding: 23px;
         border-bottom: solid 0.5px #dfe5f9;
+        position: relative;
         .list-heading{
             
             font-size: 15px;
@@ -15,6 +16,17 @@
             float: right;
             cursor: pointer;
             vertical-align: middle;
+        }
+        &.opened{
+            .dropdown{
+                width: 90px;
+                height: 45px;
+                right: 10px;
+                li{
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
         }
     }
     .list-items{

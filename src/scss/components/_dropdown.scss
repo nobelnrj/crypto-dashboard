@@ -11,44 +11,82 @@
     border-radius: 4px;
     box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
     cursor: initial;
-        li{
-            padding: 5px 15px;
-            text-transform: capitalize;
-            cursor: pointer;
-            text-align: left;
-            .notification-heading{
-                font-size: 15px;
-                margin:10px 0 10px;
-                color: #000000;
-            }
-            .notification-content{
-                font-size: 12px;
-                margin: 0 0 10px;
-                color: rgba(82, 63, 105, 0.7);
-            }
-            .time-stamp{
-                font-size: 12px;
-                color: rgba(82, 63, 105, 0.7);
-            }
-            &:hover{
-                background-color: #eee;
-            }
-            &.dropdown-header{
-                text-align: center;
-                cursor: initial;
-                border-bottom: solid 1px $border-color;
-                &:hover{
-                    background-color: #ffffff;
+    .dropdown-header{
+        text-align: center;
+        cursor: initial;
+        border-bottom: solid 1px $border-color;
+        text-transform: capitalize;
+        padding-bottom: 10px;
+        &:hover{
+            background-color: #ffffff;
+        }
+    }
+    .dropdown-list{
+        width: 100%;
+        height: 380px;
+        overflow-y: scroll;
+        padding-bottom: 30px;
+        &.read{
+            li{
+                svg{
+                    fill: $border-color;
                 }
-            }
-            &.dropdown-footer{
-                text-align: center;
-                cursor: initial;
-                padding-top: 10px;
-                border-top: solid 1px $border-color;
-                &:hover{
-                    background-color: #ffffff;
-                }
+                background-color: $border-color;
             }
         }
+    }
+    li{
+        padding: 5px 15px;
+        text-transform: capitalize;
+        cursor: pointer;
+        text-align: left;
+        position: relative;
+        svg{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: $notification-color;
+        }
+        .notification-heading{
+            font-size: 15px;
+            margin:10px 0 10px;
+            color: #000000;
+        }
+        .notification-content{
+            font-size: 12px;
+            margin: 0 0 10px;
+            color: rgba(82, 63, 105, 0.7);
+        }
+        .time-stamp{
+            font-size: 12px;
+            color: rgba(82, 63, 105, 0.7);
+        }
+        &:hover{
+            background-color: #eee;
+        }
+    }
+    .dropdown-footer{
+        text-align: center;
+        padding: 10px;
+        border-top: solid 1px $border-color;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        text-transform: capitalize;
+        cursor: pointer;
+        &:hover{
+            background-color: #ffffff;
+        }
+    }
+}
+
+.notification-btn{
+    .dropdown{
+        li{
+            padding: 5px 5px 5px 50px;
+        }
+    }
 }

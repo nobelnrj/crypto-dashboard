@@ -22,7 +22,7 @@ function currencyList(){
     }
 }
 
-document.querySelector('.sort-btn').addEventListener('click',function(){
+document.querySelector('.value-sort').addEventListener('click',function(){
     output2 = '';
     if(xhttp.readyState == 4 && xhttp.status == 200){
         var response = JSON.parse(xhttp.responseText);
@@ -34,6 +34,22 @@ document.querySelector('.sort-btn').addEventListener('click',function(){
         document.querySelector('.list-items').innerHTML += output2;
         createCarousel(response);
     }
+    document.querySelector('.opened').classList.remove("opened");
+});
+
+document.querySelector('.status-sort').addEventListener('click',function(){
+    output2 = '';
+    if(xhttp.readyState == 4 && xhttp.status == 200){
+        var response = JSON.parse(xhttp.responseText);
+        response.currency.sort(function(a, b) {
+            return parseInt(b.percentage) - parseInt(a.percentage);
+        });
+        createList(response);
+        document.querySelector('.list-items').innerHTML = '';
+        document.querySelector('.list-items').innerHTML += output2;
+        createCarousel(response);
+    }
+    document.querySelector('.opened').classList.remove("opened");
 });
 
 function createSlider(response){
@@ -51,7 +67,7 @@ function createSlider(response){
                         </div>
                         <div class="currency-data">
                             <b class="currency-value">&#165; ${response.currency[i].value}</b>
-                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage} <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
+                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
                         </div>
                     </div>
                     <div id="preview-chart-${i+1}" class="chart"></div>
@@ -74,7 +90,7 @@ function createList(response){
                         </div>
                         <div class="currency-data">
                             <b class="currency-value">&#165; ${response.currency[i].value}</b>
-                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage} <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
+                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
                         </div>
                     </li>`
         output2 += currencyList;
