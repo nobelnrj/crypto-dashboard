@@ -1,12 +1,33 @@
 /* color */
+$dark: true;
 $notification-color: #f56c89;
-$heading-color: #000a12;
-$primary-color: #1f263e;
-$secondary-color: #00000067;
 $positive-statuscolor: #01c0aa;
 $negative-statuscolor: #ee2e6b;
 $linear-gradient: #0043ff 15%, #a370f1 106%;
+
+/* light theme */
+$heading-color-light: #000a12;
+$primary-color-light: #1f263e;
+$secondary-color-light: #00000067;
+$border-color-light: #dfe5f9;
+$background-color-light: #ffffff;
+$container-background-light: #f3f6fe;
+$active-currency-light: #fafbff;
+$brand-color-light: #0043ff;
+
+
+/* dark theme */
+$heading-color-dark: #ffffff;
+$primary-color-dark: #ffffffde;
+$secondary-color-dark: #ffffff80;
+$background-color-dark: #2b2c3a;
+$container-background-dark: #808080b7;
+$active-currency-dark: #8080806b;
+$border-color-dark: #000000;
+$brand-color-dark: #FFC246;
+
+
+/* font style */
 $heading-fontweight: 700;
 $subheading-fontweight: 400;
 $content-fontweight: 300;
-$border-color: #eee;

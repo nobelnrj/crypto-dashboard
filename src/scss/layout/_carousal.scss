@@ -10,22 +10,31 @@
         span{
             width: 30px;
             height: 30px;
-            background-color: #ffffff;
+            background-color: $background-color-light;
             display: inline-block;
             margin: 0 10px 0 0;
             border-radius: 4px;
             line-height: 27px;
             text-align: center;
+            .theme-dark &{
+                background-color: $background-color-dark;
+            }
             svg{
-                fill: #1f263e38;
+                fill: $secondary-color-light;
                 width: 20px;
                 height: 20px;
                 vertical-align: middle;
+                .theme-dark &{
+                    fill: $secondary-color-dark;
+                }
             }
             &.active{
                 cursor: pointer;
                 svg{
-                    fill: #000000;
+                    fill: $heading-color-light;
+                    .theme-dark &{
+                        fill: $heading-color-dark;
+                    }
                 }
             }
         }
@@ -40,15 +49,19 @@
         .carousel-item{
             text-align: center;
             overflow: hidden;
-            background-color: #ffffff;
+            background-color: $background-color-light;
             border-radius: 12px;
-            border: solid 0.7px #dfe5f9;
+            border: solid 0.7px $border-color-light;
             width: 245px;
             height: 100px;
             padding: 5px 10px;
             display: inline-block;
             margin: 0 27px 0 0;
             cursor: pointer;
+            .theme-dark &{
+                background-color: $background-color-dark;
+                border: solid 0.7px $border-color-dark;
+            }
             .currency-symbol{
                 vertical-align: super;
             }
@@ -58,10 +71,13 @@
                 display: inline-block;
                 width: 245px;
                 height: 100px;
-                background-color: #ffffff;
+                background-color: $background-color-light;
                 padding: 5px 10px;
                 border-radius: 12px;
                 margin: 0 20px 0 0;
+                .theme-dark &{
+                    background-color: $background-color-dark;
+                }
                 .currency-details{
                     .currency-symbol{
                         display: inline-block;
@@ -128,13 +144,19 @@
         .carousel-buttons{
             span{
                 svg{
-                    fill: #1f263e38;
+                    fill: $secondary-color-light;
                     cursor: default;
+                    .theme-dark &{
+                        fill: $secondary-color-dark;
+                    }
                 }
                 &:first-child{
                     svg{
-                        fill: #000000;
+                        fill: $heading-color-light;
                         cursor: pointer;
+                        .theme-dark &{
+                            fill: $heading-color-dark;
+                        }
                     }
                 }
             }

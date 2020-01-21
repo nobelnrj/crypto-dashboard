@@ -1,10 +1,19 @@
 header{
     position: fixed;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $background-color-light;
     z-index: 1;
     box-shadow: 0 8px 28px 0 rgba(72, 89, 102, 0.1);
     top: 0;
+    .theme-dark &{
+        background-color: $background-color-dark;
+    }
+    svg{
+        fill: $heading-color-light;
+        .theme-dark &{
+            fill: $heading-color-dark;
+        }
+    }
     nav{
         margin: 15px 40px 15px 22px;
         .left-menu{
@@ -21,31 +30,42 @@ header{
                 height: 20px;
                 transition: transform 0.5s ease;
                 &:hover{
-                    fill: #0043ff;
+                    fill: $brand-color-light;
                     transform: translateX(-2px);
+                    .theme-dark &{
+                        fill: $brand-color-dark;
+                    }
                 }
             }
             .box-btn{
                 width: 20px;
                 height: 20px;
                 &:hover{
-                    fill: #0043ff;
+                    fill: $brand-color-light;
+                    .theme-dark &{
+                        fill: $brand-color-dark;
+                    }
                 }
             }
             .currency-search{
                 position: relative;
                 .search-box{
-                    background-color: #f8f9fb;
-                    color: $heading-color;
+                    background-color: $container-background-light;
+                    color: $container-background-light;
                     font-size: 11px;
                     border: none;
                     padding: 8px 75px 8px 40px;
                     vertical-align: super;
                     border-radius: 15px;
+                    .theme-dark &{
+                        background-color: $container-background-dark;
+                    }
                     &::placeholder{
-                        color: $secondary-color;
+                        color: $secondary-color-light;
                         font-size: 11px;
-                        
+                        .theme-dark &{
+                            color: $secondary-color-dark;   
+                        }
                     }
                 }
                 svg{
@@ -60,10 +80,13 @@ header{
                     position: absolute;
                     right: 20px;
                     top: 5px;
-                    
                     font-size: 15px;
                     display: none;
                     cursor: pointer;
+                    color: $heading-color-light;
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
                 }
             }
             &.sidebar-small{
@@ -104,8 +127,11 @@ header{
                 position: relative;
                 svg{
                     &:hover{
-                        fill: #0043ff;
+                        fill: $brand-color-light;
                         transform: rotate(60deg);
+                        .theme-dark &{
+                            fill: $brand-color-dark;
+                        }
                     }
                 }
                 &.opened{
@@ -121,22 +147,28 @@ header{
             .notification-btn{
                 position: relative;
                 &>.count{
-                    background-color: #f56c89;
+                    background-color: $notification-color;
                     position: absolute;
                     top: -10px;
                     right: -10px;
                     width: 18px;
                     height: 18px;
                     border-radius: 50%;
-                    color: #ffffff;
+                    color: $background-color-light;
                     font-size: 12px;
                     line-height: 18px;
                     vertical-align: middle;
+                    .theme-dark &{
+                        color: $background-color-dark;
+                    }
                 }
                 &:hover{
                     &>svg{
-                        fill: #0043ff;
+                        fill: $brand-color-light;
                         transform: rotate(-45deg);
+                        .theme-dark &{
+                            fill: $brand-color-dark;
+                        }
                     }
                 }
                 &.opened{

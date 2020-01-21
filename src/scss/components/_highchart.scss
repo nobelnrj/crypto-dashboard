@@ -6,6 +6,13 @@
     display: none;
 }
 
+.highcharts-background{
+    fill: $background-color-light;
+    .theme-dark &{
+        fill: $background-color-dark;
+    }
+}
+
 .highcharts-point-up{
     fill: #9d7ffe;
     stroke: #9d7ffe;

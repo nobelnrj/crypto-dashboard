@@ -1,6 +1,8 @@
 var notificationBtn = document.querySelector('.notification-btn');
 var settingsBtn = document.querySelector('.settings-btn');
 var sortBtn = document.querySelector('.sort-btn');
+var dropDown = document.querySelectorAll('.dropdown>*');
+
 notificationBtn.addEventListener('click',function(e){
     openDropdown(e);
 });
@@ -33,4 +35,10 @@ function dropdownToggler(e){
     else{
         e.target.classList.toggle("opened");
     }
+}
+
+for(var i=0;i<dropDown.length;i++){
+    dropDown[i].addEventListener('click',function(e){
+        e.stopPropagation();
+    });
 }

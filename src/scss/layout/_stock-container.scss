@@ -1,38 +1,54 @@
 .stock-container{
     width: 100%;
-    background-color: #ffffff;
+    background-color: $background-color-light;
     border-radius: 12px;
-    border: solid 0.7px #dfe5f9;
+    border: solid 0.7px $border-color-light;
     overflow: hidden;
+    .theme-dark &{
+        background-color: $background-color-dark;
+        border: solid 0.7px $border-color-dark;
+    }
     .stockchart-container{
         float: left;
         width: 75%;
         height: 100%;
         .stock-header{
             padding: 20px;
-            border-bottom: solid 0.7px #dfe5f9;
+            border-bottom: solid 0.7px $border-color-light;
+            background-color: $background-color-light;
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+                background-color: $background-color-dark;
+            }
             .currency-name{
                 float: left;
-                
                 font-size: 15px;
                 font-weight: $heading-fontweight;
-                color: $heading-color;
+                color: $heading-color-light;
                 text-transform: uppercase;
+                .theme-dark &{
+                    color: $heading-color-dark;
+                }
                 sub{
                     font-size: 11px;
-                    color: $secondary-color;
+                    color: $secondary-color-light;
                     cursor: pointer;
+                    .theme-dark &{
+                        color: $secondary-color-dark;
+                    }
                     svg{
                         width: 12px;
                         height: 12px;
-                        fill: $secondary-color;
+                        fill: $secondary-color-light;
                         vertical-align: middle;
+                        .theme-dark &{
+                            fill: $secondary-color-dark;
+                        }
                     }
                 }
             }
             .buy-btn{
                 float: right;
-                
                 font-size: 11px;
                 text-align: center;
                 color: #ffffff;
@@ -44,8 +60,12 @@
         }
         .stock-details{
             padding: 20px;
-            border-bottom: solid 0.7px #dfe5f9;
-            background-color: #fafbff;
+            border-bottom: solid 0.7px $border-color-light;
+            background-color: $active-currency-light;
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+                background-color: $active-currency-dark;
+            }
             .current-value{
                 margin: 0 70px 0 0;
                 display: inline-block;
@@ -53,12 +73,14 @@
                     float: left;
                     line-height: 19px;
                     font-size: 18px;
-                    color: $heading-color;
+                    color: $heading-color-light;
                     font-weight: $heading-fontweight;
                     margin: 0 10px 0 0;
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
                 }
                 .stock-status{
-                    
                     font-size: 11px;
                     color: #ee2e6b;
                     svg{
@@ -70,18 +92,22 @@
             }
             .overall-value{
                 .label{
-                    
                     text-transform: capitalize;
                     font-size: 11px;
-                    color: $secondary-color;
+                    color: $secondary-color-light;
                     margin: 0 5px 0 5px;
+                    .theme-dark &{
+                        color: $secondary-color-dark;
+                    }
                 }
                 span:nth-child(2n){
-                    
                     text-transform: capitalize;
                     font-size: 11px;
-                    color: $heading-color;
+                    color: $heading-color-light;
                     margin: 0 5px 0 5px;
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
                 }
             }
             .alert-btn{
@@ -89,7 +115,10 @@
                 padding: 5px 0;
                 text-transform: capitalize;
                 font-size: 11px;
-                color: $secondary-color;
+                color: $secondary-color-light;
+                .theme-dark &{
+                    color: $secondary-color-dark;
+                }
             }
         }
     }

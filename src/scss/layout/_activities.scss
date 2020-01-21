@@ -3,22 +3,28 @@
     height: 290px;
     float: left;
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: $background-color-light;
     margin: 20px 0 0;
-    border: solid 0.7px #dfe5f9;
+    border: solid 0.7px $border-color-light;
     overflow: hidden;
     transition: height 0.5s ease;
+    .theme-dark &{
+        background-color: $background-color-dark;
+        border: solid 0.7px $border-color-dark;  
+    }
     .expand-btn{
         transition: transform 0.5s ease;
         margin: 0 10px 0 0;
     }
     .activity-header{
         padding: 20px;
-        
         font-size: 15px;
-        color: $heading-color;
+        color: $heading-color-light;
         text-transform: capitalize;
         font-weight: $heading-fontweight;
+        .theme-dark &{
+            color: $heading-color-dark;                   
+        }
     }
     .tabs-container{
         padding: 20px;
@@ -26,13 +32,18 @@
             cursor: pointer;
             position: relative;
             display: inline-block;
-            
             font-size: 11px;
-            color: $secondary-color;
+            color: $secondary-color-light;
             text-transform: uppercase;
             margin: 0 20px 0 0;
+            .theme-dark &{
+                color: $secondary-color-dark;               
+            }
             &.active{
-                color: $heading-color;
+                color: $heading-color-light;
+                .theme-dark &{
+                    color: $heading-color-dark;           
+                }
                 &::after{
                     position: absolute;
                     bottom: -5px;
@@ -49,20 +60,29 @@
     .table-view{
         width: 100%;
         tr{
-            border-bottom: solid 0.7px #dfe5f9;
+            border-bottom: solid 0.7px $border-color-light;
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+            }
             &:first-child{
-                border-top: solid 0.7px #dfe5f9;
-                background-color: #fafbff;
+                border-top: solid 0.7px $border-color-light;
+                background-color: $active-currency-light;
+                .theme-dark &{
+                    border-top: solid 0.7px $border-color-dark;
+                    background-color: $active-currency-dark;
+                }
             }
             &:last-child{
                 border: none;
             }
             th,td{
                 padding: 15px 20px;
-                
                 font-size: 13px;
-                color: $heading-color;
+                color: $heading-color-light;
                 font-weight: $heading-fontweight;
+                .theme-dark &{
+                    color: $heading-color-dark;
+                }
                 &:last-child{
                     text-align: right;
                 }
@@ -76,7 +96,10 @@
                     background: linear-gradient(88deg, $linear-gradient);
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    color: #ffffff;
+                    color: $background-color-light;
+                    .theme-dark &{
+                        color: $background-color-dark;
+                    }
                 }
             }
         }

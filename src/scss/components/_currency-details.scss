@@ -20,20 +20,26 @@
             font-size: 15px;
             text-transform: uppercase;
             font-weight: $heading-fontweight;
-            color: $heading-color;
+            color: $heading-color-light;
             display: inline-block;
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
         }
         .currency-name{
             
             font-size: 11px;
             font-weight: $content-fontweight;
-            color: $secondary-color;
+            color: $secondary-color-light;
             text-transform: capitalize;
             text-overflow: ellipsis;
             display: inline-block;
             overflow: hidden;
             width: inherit;
             white-space: nowrap;
+            .theme-dark &{
+                color: $secondary-color-dark;
+            }
         }
     }
     .currency-data{
@@ -42,13 +48,15 @@
         white-space: normal;
         margin-left: 20px;
         .currency-value{
-            
             font-size: 15px;
             text-transform: uppercase;
             font-weight: $heading-fontweight;
-            color: $heading-color;
+            color: $heading-color-light;
             display: block;
             margin-bottom: 5px;
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
         }
         .currency-status{
             
