@@ -25,6 +25,10 @@ header{
         }
     }
     .currency-search{
+        .theme-dark &{
+            border-radius: 15px;
+            border: solid 1px $border-color-dark;
+        }
         .search-box{
             .theme-dark &{
                 background-color: $container-background-dark;
@@ -378,5 +382,11 @@ header{
 .highcharts-background{
     .theme-dark &{
         fill: $background-color-dark;
+    }
+}
+
+.expand-btn{
+    .theme-dark &{
+        border-image: linear-gradient(135deg, $background-color-dark 50%,#0043ff -7%, #a370f1);
     }
 }

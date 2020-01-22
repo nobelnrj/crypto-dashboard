@@ -57,8 +57,12 @@
             }
         }
         .logout-btn{
-            span{
+            padding: 10px 0;
+            .btn-label{
                 display: none;
+            }
+            .toggleBtn{
+                margin: 0 0 0 10px;
             }
         }
     }

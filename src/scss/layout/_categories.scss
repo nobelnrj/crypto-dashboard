@@ -87,26 +87,16 @@
     position: absolute;
     bottom: 0;
     background-color: #1f263e;
-    svg{
-        width: 20px;
-        height: 20px;
-        fill: #ffffffa4;
-        vertical-align: middle;
-    }
+    // svg{
+    //     width: 20px;
+    //     height: 20px;
+    //     fill: #ffffffa4;
+    //     vertical-align: middle;
+    // }
     span{
-        margin: 0 0 0 10px;
-        
+        vertical-align: middle;
         font-size: 13px;
         color: #ffffffa4;
         text-transform: capitalize;
     }
-    &:hover{
-        svg{
-            fill: #cc1919;
-        }
-        span{
-            color: #cc1919;
-        }
-    }
-
 }

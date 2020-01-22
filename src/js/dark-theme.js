@@ -1,5 +1,5 @@
-var boxBtn = document.querySelector('.box-btn');
-
-boxBtn.addEventListener('click',function(){
-    document.querySelector('body').classList.toggle('theme-dark');
+var toogleBtn = document.querySelector('.toggleBtn');
+toogleBtn.addEventListener('click',function(){
+   toogleBtn.classList.toggle("on");
+   document.querySelector('body').classList.toggle('theme-dark');
 });

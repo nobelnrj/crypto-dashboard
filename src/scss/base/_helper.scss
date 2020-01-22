@@ -31,9 +31,8 @@ body,html{
     display: inline-block;
     width: 0; 
     height: 0; 
-    border-left: 5px solid transparent;
-    border-top: 5px solid transparent;
-    border-right: 5px solid #0043ff;
-    border-bottom: 5px solid #a370f1;
+    border-bottom: 10px solid;
+    border-image: linear-gradient(135deg, $background-color-light 50%,#0043ff -7%, #a370f1);
+    border-left: 10px solid;
     cursor: pointer;
 }
