@@ -11,10 +11,6 @@
     border-radius: 4px;
     box-shadow: 0px 0px 50px 0px $secondary-color-light;
     cursor: initial;
-    .theme-dark &{
-        background-color: $background-color-dark;
-        box-shadow: 0px 0px 50px 0px $secondary-color-dark;
-    }
     .dropdown-header{
         text-align: center;
         cursor: initial;
@@ -22,15 +18,8 @@
         text-transform: capitalize;
         padding-bottom: 10px;
         color: $heading-color-light;
-        .theme-dark &{
-            border-bottom: solid 1px $border-color-dark;
-            color: $heading-color-dark;
-        }
         &:hover{
             background-color: $background-color-light;
-            .theme-dark &{
-                background-color: $background-color-dark;
-            }
         }
     }
     .dropdown-list{
@@ -42,14 +31,8 @@
             li{
                 svg{
                     fill: $border-color-light;
-                    .theme-dark &{
-                        fill: $border-color-dark;
-                    }
                 }
                 background-color: $border-color-light;
-                .theme-dark &{
-                    background-color: $border-color-dark;
-                }
             }
         }
     }
@@ -60,9 +43,6 @@
         text-align: left;
         position: relative;
         color: $heading-color-light;
-        .theme-dark &{
-            color: $heading-color-dark;
-        }
         svg{
             position: absolute;
             left: 15px;
@@ -74,30 +54,18 @@
             font-size: 15px;
             margin:10px 0 10px;
             color: $heading-color-light;
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
         }
         .notification-content{
             font-size: 12px;
             margin: 0 0 10px;
             color: $primary-color-light;
-            .theme-dark &{
-                color: $primary-color-dark;
-            }
         }
         .time-stamp{
             font-size: 12px;
             color: $secondary-color-light;
-            .theme-dark &{
-                color: $secondary-color-dark;
-            }
         }
         &:hover{
             background-color: $active-currency-light;
-            .theme-dark &{
-                background-color: $active-currency-dark;
-            }
         }
     }
     .dropdown-footer{
@@ -112,16 +80,8 @@
         text-transform: capitalize;
         color: $heading-color-light;
         cursor: pointer;
-        .theme-dark &{
-            color: $heading-color-dark;
-            border-top: solid 1px $border-color-dark;
-            background-color: $background-color-dark;
-        }
         &:hover{
             background-color: $background-color-light;
-            .theme-dark &{
-                background-color: $background-color-dark;
-            }
         }
     }
 }

@@ -1,0 +1,382 @@
+header{
+    .theme-dark &{
+        background-color: $background-color-dark;
+    }
+    svg{
+        .theme-dark &{
+            fill: $heading-color-dark;
+        }
+    }
+}
+
+.left-menu{
+    .menu-btn{
+        &:hover{
+            .theme-dark &{
+                fill: $brand-color-dark;
+            }
+        }
+    }
+    .box-btn{
+        &:hover{
+            .theme-dark &{
+                fill: $brand-color-dark;
+            }
+        }
+    }
+    .currency-search{
+        .search-box{
+            .theme-dark &{
+                background-color: $container-background-dark;
+                color: $heading-color-dark;
+            }
+            &::placeholder{
+                .theme-dark &{
+                    color: $secondary-color-dark;   
+                }
+            }
+        }
+        .clear-btn{
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
+        }
+    }
+}
+
+.right-menu{
+    .settings-btn{
+        svg{
+            &:hover{
+                .theme-dark &{
+                    fill: $brand-color-dark;
+                }
+            }
+        }
+    }
+    .notification-btn{
+        &>.count{
+            .theme-dark &{
+                color: $background-color-dark;
+            }
+        }
+        &:hover{
+            &>svg{
+                .theme-dark &{
+                    fill: $brand-color-dark;
+                }
+            }
+        }
+    }
+}
+
+.main-container{
+    .theme-dark &{
+        background-color: $container-background-dark;
+    }
+}
+
+.carousel-buttons{
+    span{
+        .theme-dark &{
+            background-color: $background-color-dark;
+        }
+        svg{
+            .theme-dark &{
+                fill: $secondary-color-dark;
+            }
+        }
+        &.active{
+            svg{
+                .theme-dark &{
+                    fill: $heading-color-dark;
+                }
+            }
+        }
+    }
+}
+
+.carousel-list{
+    .carousel-item{
+        .theme-dark &{
+            background-color: $background-color-dark;
+            border: solid 0.7px $border-color-dark;
+        }
+    }
+    &.loading{
+        .carousel-loader{
+            .theme-dark &{
+                background-color: $background-color-dark;
+            }
+        }
+    }
+}
+
+.carousel-container{
+    &.list-view{
+        .carousel-buttons{
+            span{
+                svg{
+                    .theme-dark &{
+                        fill: $secondary-color-dark;
+                    }
+                }
+                &.first-child{
+                    svg{
+                        .theme-dark &{
+                            fill: $heading-color-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stock-container{
+    .theme-dark &{
+        background-color: $background-color-dark;
+        border: solid 0.7px $border-color-dark;
+    }
+    .stockchart-container{
+        .stock-header{
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+                background-color: $background-color-dark;
+            }
+            .currency-name{
+                .theme-dark &{
+                    color: $heading-color-dark;
+                }
+                sub{
+                    .theme-dark &{
+                        color: $secondary-color-dark;
+                    }
+                    svg{
+                        .theme-dark &{
+                            fill: $secondary-color-dark;
+                        }
+                    }
+                }
+            }
+        }
+        .stock-details{
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+                background-color: $active-currency-dark;
+            }
+            .current-value{
+                .open-stockvalue{
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
+                }
+            }
+            .overall-value{
+                .label{
+                    .theme-dark &{
+                        color: $secondary-color-dark;
+                    }
+                }
+                span:nth-child(2n){
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
+                }
+            }
+            .alert-btn{
+                .theme-dark &{
+                    color: $secondary-color-dark;
+                }
+            }
+        }
+    }
+}
+
+.activities{
+    .theme-dark &{
+        background-color: $background-color-dark;
+        border: solid 0.7px $border-color-dark;  
+    }
+    .activity-header{
+        .theme-dark &{
+            color: $heading-color-dark;                   
+        }
+    }
+    .tabs-container{
+        .tabs{
+            .theme-dark &{
+                color: $secondary-color-dark;               
+            }
+            &.active{
+                .theme-dark &{
+                    color: $heading-color-dark;           
+                }
+            }
+        }
+    }
+    .table-view{
+        tr{
+            .theme-dark &{
+                border-bottom: solid 0.7px $border-color-dark;
+            }
+            &:first-child{
+                .theme-dark &{
+                    border-top: solid 0.7px $border-color-dark;
+                    background-color: $active-currency-dark;
+                }
+            }
+            th,td{
+                .theme-dark &{
+                    color: $heading-color-dark;
+                }  
+            }
+            td{
+                &:last-child{
+                    .theme-dark &{
+                        color: $background-color-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsfeed{
+    .theme-dark &{
+        background-color: $background-color-dark;
+        border: solid 0.7px $border-color-dark;
+    }
+    .newsfeed-header{
+        .theme-dark &{
+            color: $heading-color-dark;
+        }
+        .subscribe-btn{
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
+        }
+    }
+    .feed-container{
+        .feed-item{
+            .theme-dark &{
+                border: solid 0.7px $border-color-dark;
+                background-image: linear-gradient(135deg, $background-color-dark 50%,$linear-gradient);
+            }
+            a{
+                .time-stamp{
+                    .theme-dark &{
+                        color: $heading-color-dark;
+                    }
+                }
+                .feed-title{
+                    .theme-dark &{
+                        color: $primary-color-dark;
+                    }
+                }
+                .feed-content{
+                    .theme-dark &{
+                        color: $secondary-color-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.currency-details{
+    .currency-detail{
+        .currency-abbr{
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
+        }
+        .currency-name{
+            .theme-dark &{
+                color: $secondary-color-dark;
+            }
+        }
+    }
+    .currency-data{
+        .currency-value{
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
+        }
+    }
+}
+
+.dropdown{
+    .theme-dark &{
+        background-color: $background-color-dark;
+        box-shadow: 0px 0px 50px 0px $secondary-color-dark;
+    }
+    .dropdown-header{
+        .theme-dark &{
+            border-bottom: solid 1px $border-color-dark;
+            color: $heading-color-dark;
+        }
+        &:hover{
+            .theme-dark &{
+                background-color: $background-color-dark;
+            }
+        }
+    }
+    .dropdown-list{
+        &.read{
+            li{
+                svg{
+                    .theme-dark &{
+                        fill: $border-color-dark;
+                    }
+                }
+                .theme-dark &{
+                    background-color: $border-color-dark;
+                }
+            }
+        }
+    }
+    li{
+        .theme-dark &{
+            color: $heading-color-dark;
+        }
+        .notification-heading{
+            .theme-dark &{
+                color: $heading-color-dark;
+            }
+        }
+        .notification-content{
+            .theme-dark &{
+                color: $primary-color-dark;
+            }
+        }
+        .time-stamp{
+            .theme-dark &{
+                color: $secondary-color-dark;
+            }
+        }
+        &:hover{
+            .theme-dark &{
+                background-color: $active-currency-dark;
+            }
+        }
+    }
+    .dropdown-footer{
+        .theme-dark &{
+            color: $heading-color-dark;
+            border-top: solid 1px $border-color-dark;
+            background-color: $background-color-dark;
+        }
+        &:hover{
+            .theme-dark &{
+                background-color: $background-color-dark;
+            }
+        }
+    }
+}
+
+.highcharts-background{
+    .theme-dark &{
+        fill: $background-color-dark;
+    }
+}

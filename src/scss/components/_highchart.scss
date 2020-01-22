@@ -8,9 +8,6 @@
 
 .highcharts-background{
     fill: $background-color-light;
-    .theme-dark &{
-        fill: $background-color-dark;
-    }
 }
 
 .highcharts-point-up{

@@ -5,14 +5,8 @@ header{
     z-index: 1;
     box-shadow: 0 8px 28px 0 rgba(72, 89, 102, 0.1);
     top: 0;
-    .theme-dark &{
-        background-color: $background-color-dark;
-    }
     svg{
         fill: $heading-color-light;
-        .theme-dark &{
-            fill: $heading-color-dark;
-        }
     }
     nav{
         margin: 15px 40px 15px 22px;
@@ -32,9 +26,6 @@ header{
                 &:hover{
                     fill: $brand-color-light;
                     transform: translateX(-2px);
-                    .theme-dark &{
-                        fill: $brand-color-dark;
-                    }
                 }
             }
             .box-btn{
@@ -42,30 +33,21 @@ header{
                 height: 20px;
                 &:hover{
                     fill: $brand-color-light;
-                    .theme-dark &{
-                        fill: $brand-color-dark;
-                    }
                 }
             }
             .currency-search{
                 position: relative;
                 .search-box{
                     background-color: $container-background-light;
-                    color: $container-background-light;
+                    color: $heading-color-light;
                     font-size: 11px;
                     border: none;
                     padding: 8px 75px 8px 40px;
                     vertical-align: super;
                     border-radius: 15px;
-                    .theme-dark &{
-                        background-color: $container-background-dark;
-                    }
                     &::placeholder{
                         color: $secondary-color-light;
                         font-size: 11px;
-                        .theme-dark &{
-                            color: $secondary-color-dark;   
-                        }
                     }
                 }
                 svg{
@@ -84,9 +66,6 @@ header{
                     display: none;
                     cursor: pointer;
                     color: $heading-color-light;
-                    .theme-dark &{
-                        color: $heading-color-dark;
-                    }
                 }
             }
             &.sidebar-small{
@@ -129,9 +108,6 @@ header{
                     &:hover{
                         fill: $brand-color-light;
                         transform: rotate(60deg);
-                        .theme-dark &{
-                            fill: $brand-color-dark;
-                        }
                     }
                 }
                 &.opened{
@@ -158,17 +134,11 @@ header{
                     font-size: 12px;
                     line-height: 18px;
                     vertical-align: middle;
-                    .theme-dark &{
-                        color: $background-color-dark;
-                    }
                 }
                 &:hover{
                     &>svg{
                         fill: $brand-color-light;
                         transform: rotate(-45deg);
-                        .theme-dark &{
-                            fill: $brand-color-dark;
-                        }
                     }
                 }
                 &.opened{
