@@ -1,9 +1,9 @@
 var xhttp = new XMLHttpRequest();
 var output1 = '';
 var output2 = '';
-xhttp.open("GET","../json/currency-details.json",true);
-document.querySelector('.carousel-list').classList.add('loading');
-document.querySelector('.list-items').classList.add('loading');
+let carouselList = document.querySelector('.carousel-list');
+let listItem = document.querySelector('.list-items');
+xhttp.open("GET","https://gist.githubusercontent.com/nobelnrj/6ea1331b6276b1783ce881f02c41130a/raw/43a40ab9b6b19c64e8590ba9e20f97354c20a8a1/currency-detail.json",true);
 xhttp.send();
 xhttp.onreadystatechange = currencyList;
 function currencyList(){
@@ -16,13 +16,17 @@ function currencyList(){
                 return parseInt(a.value) - parseInt(b.value);
             });
         });
-        document.querySelector('.carousel-list').innerHTML += output1;
-        document.querySelector('.list-items').innerHTML += output2;
+        carouselList.innerHTML += output1;
+        listItem.innerHTML += output2;
         createCarousel(response);
     }
 }
 
-document.querySelector('.value-sort').addEventListener('click',function(){
+document.querySelector('.value-sort').addEventListener('click',sortbyValue);
+
+document.querySelector('.status-sort').addEventListener('click',sortbyStatus);
+
+function sortbyValue(){
     output2 = '';
     if(xhttp.readyState == 4 && xhttp.status == 200){
         var response = JSON.parse(xhttp.responseText);
@@ -30,14 +34,14 @@ document.querySelector('.value-sort').addEventListener('click',function(){
             return parseInt(b.value) - parseInt(a.value);
         });
         createList(response);
-        document.querySelector('.list-items').innerHTML = '';
-        document.querySelector('.list-items').innerHTML += output2;
+        listItem.innerHTML = '';
+        listItem.innerHTML += output2;
         createCarousel(response);
     }
     document.querySelector('.opened').classList.remove("opened");
-});
+}
 
-document.querySelector('.status-sort').addEventListener('click',function(){
+function sortbyStatus(){
     output2 = '';
     if(xhttp.readyState == 4 && xhttp.status == 200){
         var response = JSON.parse(xhttp.responseText);
@@ -45,12 +49,12 @@ document.querySelector('.status-sort').addEventListener('click',function(){
             return parseInt(b.percentage) - parseInt(a.percentage);
         });
         createList(response);
-        document.querySelector('.list-items').innerHTML = '';
-        document.querySelector('.list-items').innerHTML += output2;
+        listItem.innerHTML = '';
+        listItem.innerHTML += output2;
         createCarousel(response);
     }
     document.querySelector('.opened').classList.remove("opened");
-});
+}
 
 function createSlider(response){
     for(var i=0;i<response.currency.length;i++){
@@ -73,12 +77,12 @@ function createSlider(response){
                     <div id="preview-chart-${i+1}" class="chart"></div>
                     </li>`;
         output1 += li;
-        document.querySelector('.carousel-list').classList.remove('loading');
+        carouselList.classList.remove('loading');
     }
 }
 function createList(response){
     for(var i=0;i<response.currency.length;i++){
-        var currencyList = `
+        var currencydetailList = `
                     <li class="currency-details">
                         <div class="currency-symbol">
                             <svg>
@@ -93,7 +97,7 @@ function createList(response){
                             <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
                         </div>
                     </li>`
-        output2 += currencyList;
-        document.querySelector('.list-items').classList.remove('loading');
+        output2 += currencydetailList;
+        listItem.classList.remove('loading');
     }
 }

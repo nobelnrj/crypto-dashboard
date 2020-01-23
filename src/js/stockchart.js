@@ -1,4 +1,4 @@
-Highcharts.getJSON('../json/data.json', function (data) {
+Highcharts.getJSON('https://gist.githubusercontent.com/nobelnrj/ae4b2b7cc2be5364ce13007442819421/raw/83c383be2846fabbbc8d5dda988232cb1d11ab3e/livestockvalue.json', function (data) {
 
     // split the data set into ohlc and volume
     var ohlc = [],

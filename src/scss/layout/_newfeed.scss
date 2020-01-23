@@ -20,7 +20,7 @@
         font-weight: $heading-fontweight;
         position: relative;
         .subscribe-btn{
-            border: solid 0.7px rgba(48, 55, 80, 0.08);
+            border: solid 0.7px $border-color-light;
             padding: 5px 10px;
             border-radius: 4px;
             font-size: 11px;

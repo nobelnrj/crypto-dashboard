@@ -1,5 +1,5 @@
 Highcharts.getJSON(
-    '../json/data2.json',
+    'https://gist.githubusercontent.com/nobelnrj/c1aec1dec6ded56496a4af7732a75cd2/raw/4a3817c871fcd461edc03715ae963e7bbc27bbc8/previewdata.json',
     function (data) {
         var options = 
         {

@@ -6,6 +6,7 @@ span.toggleBtn{
     height: 22px;
     border-radius: 20px;
     vertical-align: middle;
+    background: #8080806b;
     cursor:pointer;
     margin: 0 0 0 70px;
     transition: margin 0.5s ease;
@@ -16,18 +17,24 @@ span.toggleBtn{
       width: 20px;
       height: 20px;
       position: absolute;
-      background: red;
+      background: #fff;
       border-radius: 50%;
       transition: left 0.3s ease;
+    }
+    &:hover{
+      &::before{
+        box-shadow: 0px 0px 5px 1px #fff;
+      }
     }
     &.on{
       &::before{
         left: 18px;
+        background: #35c5ea;
       }
-    }
-    &:hover{
-      &::before{
-        box-shadow: 0px 0px 5px 1px #FF1744;
+      &:hover{
+        &::before{
+          box-shadow: 0px 0px 5px 1px #35c5ea;
+        }
       }
     }
   }

@@ -16,11 +16,12 @@ sortBtn.addEventListener('click',function(e){
 });
 
 function openDropdown(e){
-    if(document.querySelector('.opened') != null && document.querySelector('.opened') === e.target.parentNode){
-        document.querySelector('.opened').classList.remove("opened");
+    var openedDropdown = document.querySelector('.opened');
+    if(openedDropdown != null && openedDropdown === e.target.parentNode){
+        openedDropdown.classList.remove("opened");
     }
-    else if(document.querySelector('.opened') != null && document.querySelector('.opened') != e.target.parentNode){
-        document.querySelector('.opened').classList.remove("opened");
+    else if(openedDropdown != null && openedDropdown != e.target.parentNode){
+        openedDropdown.classList.remove("opened");
         dropdownToggler(e);
     }
     else{
