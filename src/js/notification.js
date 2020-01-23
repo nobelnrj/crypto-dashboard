@@ -2,7 +2,7 @@ var count = document.querySelector('.count');
 var output3 = '';
 var finaloutput = '';
 var xhttp3 = new XMLHttpRequest();
-xhttp3.open("GET","https://gist.githubusercontent.com/nobelnrj/510a0570d69b1a152f4be2087774454b/raw/1c16fb6d568ecbeff8fe57432e1d81d2cab2334c/notification.json",true);
+xhttp3.open("GET","https://gist.githubusercontent.com/nobelnrj/510a0570d69b1a152f4be2087774454b/raw/d5f6ab29597e10d4069f77336a428e940350c600/notification.json",true);
 xhttp3.send();
 xhttp3.onreadystatechange = notificationList;
 
