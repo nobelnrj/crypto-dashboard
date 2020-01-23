@@ -3,7 +3,7 @@ var output1 = '';
 var output2 = '';
 let carouselList = document.querySelector('.carousel-list');
 let listItem = document.querySelector('.list-items');
-xhttp.open("GET","https://gist.githubusercontent.com/nobelnrj/6ea1331b6276b1783ce881f02c41130a/raw/43a40ab9b6b19c64e8590ba9e20f97354c20a8a1/currency-detail.json",true);
+xhttp.open("GET","https://gist.githubusercontent.com/nobelnrj/6ea1331b6276b1783ce881f02c41130a/raw/ca194fc858d720a055f611f4b38504b01483adc3/currency-detail.json",true);
 xhttp.send();
 xhttp.onreadystatechange = currencyList;
 function currencyList(){
@@ -71,7 +71,7 @@ function createSlider(response){
                         </div>
                         <div class="currency-data">
                             <b class="currency-value">&#165; ${response.currency[i].value}</b>
-                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
+                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="#point-down"></use></svg></span>
                         </div>
                     </div>
                     <div id="preview-chart-${i+1}" class="chart"></div>
@@ -94,7 +94,7 @@ function createList(response){
                         </div>
                         <div class="currency-data">
                             <b class="currency-value">&#165; ${response.currency[i].value}</b>
-                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="./sprite/symbol/sprite.svg#point-down"></use></svg></span>
+                            <span class="currency-status ${response.currency[i].status}">${response.currency[i].percentage}&#37; <svg><use href="#point-down"></use></svg></span>
                         </div>
                     </li>`
         output2 += currencydetailList;

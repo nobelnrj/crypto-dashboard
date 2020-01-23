@@ -8,6 +8,7 @@
     z-index: 2;
     transition: width 0.5s ease;
     white-space: nowrap;
+    overflow: hidden;
     .logo{
         cursor: pointer;
         margin: 24px 20px 0;
@@ -35,6 +36,10 @@
             .company-name{
                 display: none;
             }
+        }
+        .sidebar-menu{
+            width: 80px;
+            transition: width 0.5s ease;
         }
         .category-container{
             .category{

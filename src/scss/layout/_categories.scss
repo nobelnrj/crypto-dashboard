@@ -1,6 +1,12 @@
+.sidebar-menu{
+    overflow: hidden;
+    width: 240px;
+}
+
 .category-container{
-    height: 80vh;
+    height: 545px;
     overflow-y: scroll;
+    overflow-x: hidden;
     .category{
         .category-heading{
             font-family: 'Oxygen' , sans-serif;
@@ -74,9 +80,6 @@
                 }
             }
         }
-    }
-    &::-webkit-scrollbar{
-        display: none;
     }
 }
 .logout-btn{

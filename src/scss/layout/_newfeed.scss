@@ -32,49 +32,53 @@
             text-transform: uppercase;
         }
     }
-    .feed-container{
-        padding: 0 20px 20px;
-        height: 250px;
-        overflow: scroll;
-        &::-webkit-scrollbar{
-            display: none;
-        }
-        .feed-item{
-            padding: 5px 20px;
-            border: solid 0.7px $border-color-light;
-            border-radius: 12px;
-            margin: 0 0 20px;
-            background-image: linear-gradient(135deg, $background-color-light 50%,$linear-gradient);
-            background-size: 115px 110px;
-            background-repeat: no-repeat;
-            background-position: right bottom;
-            a{
-                .time-stamp{
-                    font-size: 11px;
-                    color: $heading-color-light;
-                    letter-spacing: 0.28px;
-                    margin: 0 0 15px;
-                }
-                .feed-title{
-                    font-size: 13px;
-                    line-height: 18px;
-                    color: $primary-color-light;
-                    width: 350px;
-                    margin: 0 0 10px;
-                }
-                .feed-content{
-                    font-size: 12px;
-                    line-height: 18px;
-                    color: $secondary-color-light;
-                    width: 350px;
-                }
-            }
-        }
+    .newsfeed-body{
+        width: calc(100% + 20px);
+        padding-left: 20px;
+        overflow: hidden;
     }
     &.small-section{
         height: 55px;
         .expand-btn{
             transform: rotate(-45deg);
+        }
+    }
+}
+
+.feed-container{
+    width: 100%;
+    padding: 0 20px 0 0;
+    height: 250px;
+    overflow: scroll;
+    .feed-item{
+        padding: 5px 20px;
+        border: solid 0.7px $border-color-light;
+        border-radius: 12px;
+        margin: 0 0 20px;
+        background-image: linear-gradient(135deg, $background-color-light 50%,$linear-gradient);
+        background-size: 115px 110px;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        a{
+            .time-stamp{
+                font-size: 11px;
+                color: $heading-color-light;
+                letter-spacing: 0.28px;
+                margin: 0 0 15px;
+            }
+            .feed-title{
+                font-size: 13px;
+                line-height: 18px;
+                color: $primary-color-light;
+                width: 350px;
+                margin: 0 0 10px;
+            }
+            .feed-content{
+                font-size: 12px;
+                line-height: 18px;
+                color: $secondary-color-light;
+                width: 350px;
+            }
         }
     }
 }
