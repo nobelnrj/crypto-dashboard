@@ -18,6 +18,7 @@ function currencyList(){
         });
         carouselList.innerHTML += output1;
         listItem.innerHTML += output2;
+        previewChart();
         createCarousel(response);
     }
 }

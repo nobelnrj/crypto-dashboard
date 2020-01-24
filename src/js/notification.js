@@ -9,7 +9,6 @@ xhttp3.onreadystatechange = notificationList;
 function notificationList(){
     if(xhttp3.readyState == 4 && xhttp3.status == 200){
         var response = JSON.parse(xhttp3.responseText);
-        console.log(response);
         createNotificationlist(response);
     }
 }

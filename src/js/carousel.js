@@ -17,7 +17,7 @@ function createCarousel(response){
             rightBtn.classList.remove('active');
         }
         if(carouselContainer.classList.contains("list-view")){
-            currencyContainer.style.left = "0px";
+            currencyContainer.style.transform = `translateX(${0}px)`;
         }
         leftBtn.classList.add('active');
     });
