@@ -38,3 +38,5 @@ function createCarousel(response){
         }
     });
 }
+
+document.addEventListener('touchstart',  {passive: true});
