@@ -16,15 +16,21 @@ $active-currency-light: #fafbff;
 $brand-color-light: #0043ff;
 
 /* dark theme */
-$heading-color-dark: #ffffff;
-$primary-color-dark: #ffffffde;
-$secondary-color-dark: #ffffff80;
-$background-color-dark: #1f263e;
-$container-background-dark: #1f263ed0;
-$active-currency-dark: #8080806b;
-$border-color-dark: #000000;
-$brand-color-dark: #35c5ea;
-
+$theme: (
+    'dark': (
+        'heading-color-dark': #ffffff,
+        'primary-color-dark': #ffffffde,
+        'secondary-color-dark': #ffffff80,
+        'background-color-dark': #1f263e,
+        'container-background-dark': #1f263ed0,
+        'active-currency-dark': #8080806b,
+        'border-color-dark': #000000,
+        'feed-background': linear-gradient(135deg, #1f263e 50%,$linear-gradient),
+        'brand-color-dark': #35c5ea,
+        'expand-btn-dark': linear-gradient(135deg, #1f263e 50%,#0043ff -7%, #a370f1),
+        'dropdown-shadow-dark': 0px 0px 10px 0px #ffffff80
+    )
+);
 
 /* font style */
 $heading-fontweight: 700;

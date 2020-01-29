@@ -70,14 +70,14 @@
                 font-size: 13px;
                 line-height: 18px;
                 color: $primary-color-light;
-                width: 350px;
+                max-width: 80%;
                 margin: 0 0 10px;
             }
             .feed-content{
                 font-size: 12px;
                 line-height: 18px;
                 color: $secondary-color-light;
-                width: 350px;
+                max-width: 80%;
             }
         }
     }

@@ -1,48 +1,32 @@
 header{
-    .theme-dark &{
-        background-color: $background-color-dark;
-    }
+    @include theme('dark','background-color-dark','background-color');
     svg{
-        .theme-dark &{
-            fill: $heading-color-dark;
-        }
+        @include theme('dark','heading-color-dark','fill');
     }
 }
 
 .left-menu{
     .menu-btn{
         &:hover{
-            .theme-dark &{
-                fill: $brand-color-dark;
-            }
+            @include theme('dark','brand-color-dark','fill');
         }
     }
     .box-btn{
         &:hover{
-            .theme-dark &{
-                fill: $brand-color-dark;
-            }
+            @include theme('dark','brand-color-dark','fill');
         }
     }
     .currency-search{
-        .theme-dark &{
-            border-radius: 15px;
-        }
+        @include theme('dark','15px','border-radius');
         .search-box{
-            .theme-dark &{
-                background-color: $active-currency-dark;
-                color: $heading-color-dark;
-            }
+            @include theme('dark','active-currency-dark','background-color');
+            @include theme('dark','heading-color-dark','color');
             &::placeholder{
-                .theme-dark &{
-                    color: $secondary-color-dark;   
-                }
+                @include theme('dark','secondary-color-dark','color');
             }
         }
         .clear-btn{
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
+            @include theme('dark','heading-color-dark','color');
         }
     }
 }
@@ -51,49 +35,35 @@ header{
     .settings-btn{
         svg{
             &:hover{
-                .theme-dark &{
-                    fill: $brand-color-dark;
-                }
+                @include theme('dark','brand-color-dark','fill');
             }
         }
     }
     .notification-btn{
         &>.count{
-            .theme-dark &{
-                color: $background-color-dark;
-            }
+            @include theme('dark','background-color-dark','color');
         }
         &:hover{
             &>svg{
-                .theme-dark &{
-                    fill: $brand-color-dark;
-                }
+                @include theme('dark','brand-color-dark','fill');
             }
         }
     }
 }
 
 .main-container{
-    .theme-dark &{
-        background-color: $container-background-dark;
-    }
+    @include theme('dark','container-background-dark','background-color');
 }
 
 .carousel-buttons{
     span{
-        .theme-dark &{
-            background-color: $background-color-dark;
-        }
+        @include theme('dark','background-color-dark','background-color');
         svg{
-            .theme-dark &{
-                fill: $secondary-color-dark;
-            }
+            @include theme('dark','secondary-color-dark','fill');
         }
         &.active{
             svg{
-                .theme-dark &{
-                    fill: $heading-color-dark;
-                }
+                @include theme('dark','heading-color-dark','fill');
             }
         }
     }
@@ -101,16 +71,12 @@ header{
 
 .carousel-list{
     .carousel-item{
-        .theme-dark &{
-            background-color: $background-color-dark;
-            border: solid 0.7px $border-color-dark;
-        }
+        @include theme('dark','background-color-dark','background-color');
+        @include theme('dark','border-color-dark','border');
     }
     &.loading{
         .carousel-loader{
-            .theme-dark &{
-                background-color: $background-color-dark;
-            }
+            @include theme('dark','background-color-dark','background-color');
         }
     }
 }
@@ -120,15 +86,11 @@ header{
         .carousel-buttons{
             span{
                 svg{
-                    .theme-dark &{
-                        fill: $secondary-color-dark;
-                    }
+                    @include theme('dark','secondary-color-dark','fill');
                 }
                 &.first-child{
                     svg{
-                        .theme-dark &{
-                            fill: $heading-color-dark;
-                        }
+                        @include theme('dark','heading-color-dark','fill');
                     }
                 }
             }
@@ -137,60 +99,44 @@ header{
 }
 
 .stock-container{
-    .theme-dark &{
-        background-color: $background-color-dark;
-        border: solid 0.7px $border-color-dark;
-    }
+    @include theme('dark','background-color-dark','background-color');
+    @include theme('dark','border-color-dark','border');
     .stockchart-container{
         .stock-header{
             .theme-dark &{
-                border-bottom: solid 0.7px $border-color-dark;
-                background-color: $background-color-dark;
+                border-bottom: solid 0.7px #000000;
             }
+            @include theme('dark','background-color-dark','background-color');
             .currency-name{
-                .theme-dark &{
-                    color: $heading-color-dark;
-                }
+                @include theme('dark','heading-color-dark','color');
                 sub{
-                    .theme-dark &{
-                        color: $secondary-color-dark;
-                    }
+                    @include theme('dark','secondary-color-dark','color');
                     svg{
-                        .theme-dark &{
-                            fill: $secondary-color-dark;
-                        }
+                        @include theme('dark','secondary-color-dark','fill');
                     }
                 }
             }
         }
         .stock-details{
             .theme-dark &{
-                border-bottom: solid 0.7px $border-color-dark;
-                background-color: $active-currency-dark;
+                border-bottom: solid 0.7px #000000;
             }
+            @include theme('dark','active-currency-dark','background-color');
             .current-value{
                 .open-stockvalue{
-                    .theme-dark &{
-                        color: $heading-color-dark;
-                    }
+                    @include theme('dark','heading-color-dark','color');
                 }
             }
             .overall-value{
                 .label{
-                    .theme-dark &{
-                        color: $secondary-color-dark;
-                    }
+                    @include theme('dark','secondary-color-dark','color');
                 }
                 span:nth-child(2n){
-                    .theme-dark &{
-                        color: $heading-color-dark;
-                    }
+                    @include theme('dark','heading-color-dark','color');
                 }
             }
             .alert-btn{
-                .theme-dark &{
-                    color: $secondary-color-dark;
-                }
+                @include theme('dark','secondary-color-dark','color');
             }
         }
     }
@@ -198,47 +144,37 @@ header{
 
 .activities{
     .theme-dark &{
-        background-color: $background-color-dark;
-        border: solid 0.7px $border-color-dark;  
+        border: solid 0.7px #000000;  
     }
+    @include theme('dark','background-color-dark','background-color');
     .activity-header{
-        .theme-dark &{
-            color: $heading-color-dark;                   
-        }
+        @include theme('dark','heading-color-dark','color');
     }
     .tabs-container{
         .tabs{
-            .theme-dark &{
-                color: $secondary-color-dark;               
-            }
+            @include theme('dark','secondary-color-dark','color');
             &.active{
-                .theme-dark &{
-                    color: $heading-color-dark;           
-                }
+                @include theme('dark','heading-color-dark','color');
             }
         }
     }
     .table-view{
         tr{
             .theme-dark &{
-                border-bottom: solid 0.7px $border-color-dark;
+                border-bottom: solid 0.7px #000000;
             }
             &:first-child{
                 .theme-dark &{
-                    border-top: solid 0.7px $border-color-dark;
-                    background-color: $active-currency-dark;
+                    border-top: solid 0.7px #000000;
                 }
+                @include theme('dark','active-currency-dark','background-color');
             }
             th,td{
-                .theme-dark &{
-                    color: $heading-color-dark;
-                }  
+                @include theme('dark','heading-color-dark','color');
             }
             td{
                 &:last-child{
-                    .theme-dark &{
-                        color: $background-color-dark;
-                    }
+                    @include theme('dark','background-color-dark','color');
                 }
             }
         }
@@ -247,41 +183,33 @@ header{
 
 .newsfeed{
     .theme-dark &{
-        background-color: $background-color-dark;
-        border: solid 0.7px $border-color-dark;
+        border: solid 0.7px #000000;
     }
+    @include theme('dark','background-color-dark','background-color');
     .newsfeed-header{
-        .theme-dark &{
-            color: $heading-color-dark;
-        }
+        @include theme('dark','heading-color-dark','color');
         .subscribe-btn{
             .theme-dark &{
-                border: solid 0.7px $border-color-dark;
-                color: $heading-color-dark;
+                border: solid 0.7px #000000;
             }
+            @include theme('dark','heading-color-dark','color');
         }
     }
     .feed-container{
         .feed-item{
             .theme-dark &{
-                border: solid 0.7px $border-color-dark;
-                background-image: linear-gradient(135deg, $background-color-dark 50%,$linear-gradient);
+                border: solid 0.7px #000000;
             }
+            @include theme('dark','feed-background','background-image');
             a{
                 .time-stamp{
-                    .theme-dark &{
-                        color: $heading-color-dark;
-                    }
+                    @include theme('dark','heading-color-dark','color');
                 }
                 .feed-title{
-                    .theme-dark &{
-                        color: $primary-color-dark;
-                    }
+                    @include theme('dark','primary-color-dark','color');
                 }
                 .feed-content{
-                    .theme-dark &{
-                        color: $secondary-color-dark;
-                    }
+                    @include theme('dark','secondary-color-dark','color');
                 }
             }
         }
@@ -291,102 +219,104 @@ header{
 .currency-details{
     .currency-detail{
         .currency-abbr{
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
+            @include theme('dark','heading-color-dark','color');
         }
         .currency-name{
-            .theme-dark &{
-                color: $secondary-color-dark;
-            }
+            @include theme('dark','secondary-color-dark','color');
         }
     }
     .currency-data{
         .currency-value{
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
+            @include theme('dark','heading-color-dark','color');
         }
     }
 }
 
 .dropdown{
-    .theme-dark &{
-        background-color: $background-color-dark;
-        box-shadow: 0px 0px 10px 0px $secondary-color-dark;
-    }
+    @include theme('dark','dropdown-shadow-dark','box-shadow');
+    @include theme('dark','background-color-dark','background-color');
     .dropdown-header{
         .theme-dark &{
-            border-bottom: solid 1px $border-color-dark;
-            color: $heading-color-dark;
+            border-bottom: solid 1px #000000;
         }
+        @include theme('dark','heading-color-dark','color');
         &:hover{
-            .theme-dark &{
-                background-color: $background-color-dark;
-            }
+            @include theme('dark','background-color-dark','background-color');
         }
     }
     .dropdown-list{
         &.read{
             li{
                 svg{
-                    .theme-dark &{
-                        fill: $border-color-dark;
-                    }
+                    @include theme('dark','border-color-dark','fill');
                 }
-                .theme-dark &{
-                    background-color: $border-color-dark;
-                }
+                @include theme('dark','border-color-dark','background-color');
             }
         }
     }
     li{
-        .theme-dark &{
-            color: $heading-color-dark;
-        }
+        @include theme('dark','heading-color-dark','color');
         .notification-heading{
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
+            @include theme('dark','heading-color-dark','color');
         }
         .notification-content{
-            .theme-dark &{
-                color: $primary-color-dark;
-            }
+            @include theme('dark','primary-color-dark','color');
         }
         .time-stamp{
-            .theme-dark &{
-                color: $secondary-color-dark;
-            }
+            @include theme('dark','secondary-color-dark','color');
         }
         &:hover{
-            .theme-dark &{
-                background-color: $active-currency-dark;
-            }
+            @include theme('dark','active-currency-dark','background-color');
         }
     }
     .dropdown-footer{
         .theme-dark &{
-            color: $heading-color-dark;
-            border-top: solid 1px $border-color-dark;
-            background-color: $background-color-dark;
+            border-top: solid 1px #000000;
         }
+        @include theme('dark','heading-color-dark','color');
+        @include theme('dark','background-color-dark','background-color');
         &:hover{
-            .theme-dark &{
-                background-color: $background-color-dark;
-            }
+            @include theme('dark','background-color-dark','background-color');
         }
     }
 }
 
 .highcharts-background{
-    .theme-dark &{
-        fill: $background-color-dark;
-    }
+    @include theme('dark','background-color-dark','fill');
 }
 
 .expand-btn{
+    @include theme('dark','expand-btn-dark','border-image');
+}
+
+.currency-list{
     .theme-dark &{
-        border-image: linear-gradient(135deg, $background-color-dark 50%,#0043ff -7%, #a370f1);
+        border-left: solid 0.7px #000000;
+    }
+    @include theme('dark','background-color-dark','background-color');
+    .list-header{
+        .theme-dark &{
+            border-bottom: solid 0.5px #000000;
+        }
+        .list-heading{
+            @include theme('dark','heading-color-dark','color');
+        }
+        svg{
+            @include theme('dark','heading-color-dark','fill');
+        }
+    }
+}
+
+.list-items{
+    .currency-details{
+        .theme-dark &{
+            border-bottom: solid 1px #000000;
+        }
+        &:first-child{
+            @include theme('dark','active-currency-dark','background-color');
+        }
+        &:hover{
+            @include theme('dark','active-currency-dark','background-color');
+        }
     }
 }

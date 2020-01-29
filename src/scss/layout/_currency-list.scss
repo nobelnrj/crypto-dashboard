@@ -1,24 +1,14 @@
 .currency-list{
     border-left: solid 0.7px $border-color-light;
     background-color: $background-color-light;
-    .theme-dark &{
-        border-left: solid 0.7px $border-color-dark;
-        background-color: $background-color-dark;
-    }
     .list-header{
         padding: 23px;
         border-bottom: solid 0.5px $border-color-light;
         position: relative;
-        .theme-dark &{
-            border-bottom: solid 0.5px $border-color-dark;
-        }
         .list-heading{
             font-size: 15px;
             color: $heading-color-light;
             text-transform: capitalize;
-            .theme-dark &{
-                color: $heading-color-dark;
-            }
         }
         svg{
             width: 20px;
@@ -27,9 +17,6 @@
             cursor: pointer;
             vertical-align: middle;
             fill: $heading-color-light;
-            .theme-dark &{
-                fill: $heading-color-dark;
-            }
         }
         &.opened{
             .dropdown{
@@ -49,9 +36,6 @@
             cursor: pointer;
             border-bottom: solid 1px $border-color-light;
             padding: 17px;
-            .theme-dark &{
-                border-bottom: solid 1px $border-color-dark;
-            }
             .currency-symbol{
                 svg{
                     vertical-align: bottom;
@@ -85,15 +69,9 @@
             }
             &:first-child{
                 background-color: $active-currency-light;
-                .theme-dark &{
-                    background-color: $active-currency-dark;
-                }
             }
             &:hover{
                 background-color: $active-currency-light;
-                .theme-dark &{
-                    background-color: $active-currency-dark;
-                }
             }
             &:last-child{
                 border: none;

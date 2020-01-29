@@ -1,0 +1,10 @@
+@function getValue($theme-type, $type ) {
+  $map: map-get($theme, $theme-type);
+  @return map-get($map, $type);
+}
+
+@mixin theme($theme-type, $type ,$property-name) {
+  .theme-#{$theme-type} &{
+    #{$property-name}: getValue($theme-type, $type);
+  }
+}
