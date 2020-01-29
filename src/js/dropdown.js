@@ -1,5 +1,5 @@
-var notificationBtn = document.querySelector('.notification-btn');
-var settingsBtn = document.querySelector('.settings-btn');
+var notificationBtn = document.querySelector('.notification-btn>*');
+var settingsBtn = document.querySelector('.settings-btn>*');
 var sortBtn = document.querySelector('.sort-btn');
 var dropDown = document.querySelectorAll('.dropdown>*');
 
@@ -43,3 +43,11 @@ for(var i=0;i<dropDown.length;i++){
         e.stopPropagation();
     });
 }
+
+// to close all the dropdown on click outside the dropdown
+window.onclick = function(e){
+    console.log(e.target);
+    if(e.target != notificationBtn && e.target != settingsBtn && e.target != sortBtn && e.target != dropDown){
+        document.querySelector('.opened').classList.remove('opened');
+    }
+};
