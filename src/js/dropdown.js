@@ -46,8 +46,9 @@ for(var i=0;i<dropDown.length;i++){
 
 // to close all the dropdown on click outside the dropdown
 window.onclick = function(e){
-    console.log(e.target);
     if(e.target != notificationBtn && e.target != settingsBtn && e.target != sortBtn && e.target != dropDown){
-        document.querySelector('.opened').classList.remove('opened');
+        if(document.querySelector('.opened') != null){
+            document.querySelector('.opened').classList.remove('opened');
+        }
     }
 };

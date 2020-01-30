@@ -10,147 +10,149 @@ header{
     }
     nav{
         margin: 15px 40px 15px 22px;
-        .left-menu{
-            float: left;
-            padding: 10px 0;
-            margin: 0 0 0 200px;
-            transition: margin 0.5s ease;
-            &>*{
-                display: inline-block;
-                margin: 0 0 0 30px;
-            }
-            .menu-btn{
-                width: 20px;
-                height: 20px;
-                transition: transform 0.5s ease;
-                &:hover{
-                    fill: $brand-color-light;
-                    transform: translateX(-2px);
-                }
-            }
-            .box-btn{
-                width: 20px;
-                height: 20px;
-                &:hover{
-                    fill: $brand-color-light;
-                }
-            }
-            .currency-search{
-                position: relative;
-                .search-box{
-                    background-color: $container-background-light;
-                    color: $heading-color-light;
-                    font-size: 11px;
-                    border: none;
-                    padding: 8px 75px 8px 40px;
-                    vertical-align: super;
-                    border-radius: 15px;
-                    &::placeholder{
-                        color: $secondary-color-light;
-                        font-size: 11px;
-                    }
-                }
-                svg{
-                    width: 18px;
-                    height: 18px;
-                    position: absolute;
-                    left: 10px;
-                    top: 5px;
-                    cursor: pointer;
-                }
-                .clear-btn{
-                    position: absolute;
-                    right: 20px;
-                    top: 5px;
-                    font-size: 15px;
-                    display: none;
-                    cursor: pointer;
-                    color: $heading-color-light;
-                }
-            }
-            &.sidebar-small{
-                margin: 0 0 0 50px;
-                .menu-btn{
-                    &:hover{
-                        transform: translateX(2px);
-                    }
-                }
+    }
+}
+
+.left-menu{
+    float: left;
+    padding: 10px 0;
+    margin: 0 0 0 200px;
+    transition: margin 0.5s ease;
+    &>*{
+        display: inline-block;
+        margin: 0 0 0 30px;
+    }
+    .menu-btn{
+        width: 18px;
+        height: 18px;
+        transition: transform 0.5s ease;
+        &:hover{
+            fill: $brand-color-light;
+            transform: translateX(-2px);
+        }
+    }
+    .box-btn{
+        width: 18px;
+        height: 18px;
+        &:hover{
+            fill: $brand-color-light;
+        }
+    }
+    .currency-search{
+        position: relative;
+        .search-box{
+            background-color: $container-background-light;
+            color: $heading-color-light;
+            font-size: 11px;
+            border: none;
+            padding: 8px 75px 8px 40px;
+            vertical-align: super;
+            border-radius: 15px;
+            &::placeholder{
+                color: $secondary-color-light;
+                font-size: 11px;
             }
         }
-        .right-menu{
-            float: right;
-            padding: 8px 0;
-            &>*{
-                display: inline-block;
-                margin: 0 0 0 30px;
+        svg{
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            cursor: pointer;
+        }
+        .clear-btn{
+            position: absolute;
+            right: 20px;
+            top: 5px;
+            font-size: 15px;
+            display: none;
+            cursor: pointer;
+            color: $heading-color-light;
+        }
+    }
+    &.sidebar-small{
+        margin: 0 0 0 50px;
+        .menu-btn{
+            &:hover{
+                transform: translateX(2px);
             }
-            .profile-photo{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: transform 0.5s ease;
-                &:hover{
-                    transform: scale(1.1);
-                }
-            }   
-            .settings-btn,.notification-btn,.country-btn{
-                svg{
-                    width: 18px;
-                    height: 18px;
-                    vertical-align: middle;
-                    transition: transform 0.5s ease;
-                }
+        }
+    }
+}
+
+.right-menu{
+    float: right;
+    padding: 8px 0;
+    &>*{
+        display: inline-block;
+        margin: 0 0 0 30px;
+    }
+    .profile-photo{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }   
+    .settings-btn,.notification-btn,.country-btn{
+        svg{
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+            transition: transform 0.5s ease;
+        }
+    }
+    .settings-btn{
+        position: relative;
+        svg{
+            &:hover{
+                fill: $brand-color-light;
+                transform: rotate(60deg);
             }
-            .settings-btn{
-                position: relative;
-                svg{
-                    &:hover{
-                        fill: $brand-color-light;
-                        transform: rotate(60deg);
-                    }
-                }
-                &.opened{
-                    .dropdown{
-                        width: 100px;
-                        height: auto;
-                        transform: translate3d(0px,-5px,0px);
-                        will-change: transform;
-                        padding: 10px 0;
-                    }
-                }
+        }
+        &.opened{
+            .dropdown{
+                width: 100px;
+                height: auto;
+                transform: translate3d(0px,-5px,0px);
+                will-change: transform;
+                padding: 10px 0;
             }
-            .notification-btn{
-                position: relative;
-                &>.count{
-                    background-color: $notification-color;
-                    position: absolute;
-                    top: -10px;
-                    right: -10px;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 50%;
-                    color: $background-color-light;
-                    font-size: 12px;
-                    line-height: 18px;
-                    vertical-align: middle;
-                }
-                &:hover{
-                    &>svg{
-                        fill: $brand-color-light;
-                        transform: rotate(-45deg);
-                    }
-                }
-                &.opened{
-                    .dropdown{
-                        width: 300px;
-                        height: auto;
-                        min-height: 200px;
-                        transform: translate3d(0px,-5px,0px);
-                        will-change: transform;
-                        padding: 10px 0;
-                    }
-                }
+        }
+    }
+    .notification-btn{
+        position: relative;
+        &>.count{
+            background-color: $notification-color;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            color: $background-color-light;
+            font-size: 12px;
+            line-height: 18px;
+            vertical-align: middle;
+        }
+        &:hover{
+            &>svg{
+                fill: $brand-color-light;
+                transform: rotate(-45deg);
+            }
+        }
+        &.opened{
+            .dropdown{
+                width: 300px;
+                height: auto;
+                min-height: 200px;
+                transform: translate3d(0px,-5px,0px);
+                will-change: transform;
+                padding: 10px 0;
             }
         }
     }
